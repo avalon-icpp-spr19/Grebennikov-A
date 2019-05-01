@@ -5,23 +5,24 @@ using namespace std;
 //while
 //Упражнение  1
 
-//int main()
-//{
-//	int num = 1;
-//	int max, min;
-//
-//	max = 999999;
-//	min = 0;
-//
-//	while (num != 0)
-//	{
-//		cin >> num;
-//		min = (num < min) ? num : min;
-//		max = (num > max) ? num : max;
-//	}
-//
-//	cout << min << ";" << max << endl;
-//}
+/*int main()
+{
+int max, min;
+	int num = 1;
+	cout << "Введите последовательность: " << endl;
+	cin >> num;
+	min = num;
+	max = num;
+	while (num != 0) {
+		if (num < min) {
+			min = num;
+		}
+		if (num > max) {
+			max = num;
+		}
+		cin >> num;
+	}
+	cout << min << " " << max << endl;*/
 
 //Упражнение 2
 
