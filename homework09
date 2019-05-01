@@ -1,0 +1,91 @@
+#include<iostream>
+#include"Date.hpp"
+#include <string>
+using namespace ext;
+using namespace std;
+int ex1(int n)
+{
+	int counter = 0, cube;
+	for (int i = 0; i < 100; ++i)
+	{
+		if (i % 2 != 0 || i % 3 != 0 || i % 5 != 0)
+		{
+			cube = pow(i, 3);
+			cout << cube << " ";
+			counter += 1;
+			if (counter == n)break;
+		}
+	}
+	cout << endl;
+	return 1;
+}
+int ex2(float r, float h)
+{
+
+
+	cout << 3.14 * (pow(r, 2))*h << endl;
+	return 1;
+}
+int ex3_1(int a, int b)
+{
+	int min;
+	if (a < b)
+	{
+		min = a;
+	}
+	else
+	{
+		min = b;
+	}
+	return min;
+}
+int ex3_2(int c, int d, int e, int f)
+{
+	int min4;
+	if (LGMinimal(c, d) < LGMinimal(e, f))
+	{
+		min4 = ex3_1(c, d);
+	}
+	else
+	{
+		min4 = ex3_1(e, f);
+	}
+	cout << min4 << endl;
+	return min4;
+}
+
+
+
+
+int main()
+{
+//ex1
+int n;
+	cout << "Enter n = ";
+	cin >> n;
+ex1(n);
+//ex2
+int r, h;
+	cout << "Введите радиус = ";
+	cin >> r;
+	cout << "Введите высоту = ";
+	cin >> h;
+ex2(r, h);
+//ex3
+	int c, d, e, f;
+	cout << "Введите 4 числа через <Enter>: " << endl;
+	cin >> c >> endl;
+	cin >> d >> endl;
+	cin >> e >> endl;
+	cin >> f >> endl;
+	cout << "Minimal - " << ex3_4(c, d, e, f);
+
+
+
+
+
+
+
+
+
+}
