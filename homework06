@@ -1,1 +1,248 @@
-   
+//ex.1
+/*int Mas[10] = {};
+	const float Mas1[20] = {};
+	int data[6] = { 2, 4, 8, 16, 32, 64 };//Размер массива - 6, элемент [0]-2, элемент [3]-16, у элемента 8 индекс 2, у элемента 32 индекс 4
+	data[0] = 1;
+	data[5] *= 3;
+	for (int i = 0; i < 6; i++) {
+	cout << data[i] << " ";
+	}
+	double someArr[5] = { 1.63872,2.2345217889,3.21781422,4.123813,5.127868 };
+	cout << endl;
+	for (int i = 0; i < 5; i++) {
+	cout << someArr[i] << " ";
+	}
+	int idkHowLongItIs[] = { 1,5,15,5,4,5,4,4,5,5,4,5,4,5,4,5,4,75,4,4, };
+	int data1[5] = { 1, 2 };//Размер этого массива - 5, элемент с индексом 1 равен 2, а элемент с индексом 2 равен 0.Объявив таким образом массив мы проинициализировали только первых два элемента, остальные стали нулями
+	cout << endl;
+	for (int i = 0; i < 5; i++) {
+	cout << data1[i] << " ";
+	}
+	const char alpha[3] = { 'a', 'b', 'c' };//Размер массива - 3, элемент с индексом 0 равен 'a', индекс элемента 'c' равен 2
+	/*alpha[0]; - допустимо
+	alpha[3]; - допустимо
+	alpha[1] = 'd'; - недопустимо, т.к. массив константный
+	alpha[1] = 'b'; - недопустимо, т.к. массив константный*/
+	/*cout << endl;
+	for (int i = 0; i < 3; i++) {
+	cout << alpha[i] << " ";
+	}*/
+//ex.2
+/*int Arr[20] = {};
+	for (int i = 1; i <= 20; i++) {//Задание 1
+	Arr[i - 1] = i;
+	}
+	for (int i = 0; i < 20; i++) {
+	cout << Arr[i] << " ";
+	}
+	cout << endl;
+	for (int i = 1; i <= 20; i++) {//Задание 2
+	for (int j = i; j >= 0; j--) {
+	Arr[i - 1] = i * 2;
+	}
+	}
+	for (int i = 0; i < 20; i++) {
+	cout << Arr[i] << " ";
+	}
+	cout << endl;
+	for (int i = 0; i < 20; i++) {//Задание 3
+	Arr[i] = 1;
+	}
+	for (int i = 1; i <= 20; i++) {
+	for (int j = i; j >= 0; j--) {
+	Arr[i - 1] *= 2;
+	}
+	}
+	for (int i = 0; i < 20; i++) {
+	cout << Arr[i] << " ";
+	}
+	cout << endl;
+	for (int i = 1; i <= 20; i++) {//Задание 4
+	cout << Arr[i-1] << " ";
+	if (i % 5 == 0) {
+	cout << endl;
+	}
+	}
+	cout << endl;
+	for (int i = 0; i < 20; i++) {//Задание 5
+	if (i % 2 == 0) {
+	Arr[i] = 0;
+	}
+	}
+	for (int i = 1; i <= 20; i++) {
+	cout << Arr[i - 1] << " ";
+	if (i % 5 == 0) {
+	cout << endl;
+	}
+	}*/
+   //ex.3
+   /*int data[10]={};//Задание 1 или очень простое задание
+	int max = 0, sum = 0, counterMore = 0, counterLess = 0, counterEquals = 0;
+	for (int i = 0; i < 10; ++i)
+	{
+	data[i] = ext::GetRandomValue(-10, 10, true);
+	}
+	for (int i = 0; i < 10; i++) {
+	cout << data[i] << " ";
+	}
+	cout << endl;
+	for (int i = 0; i < 10; i++) {
+	if (data[i] > data[max]) {
+	max = i;
+	}
+	}
+	cout << "Индекс максимального элемента: " << max << " Значение максимального элемента: " << data[max] << endl;
+	int arrGener[100] = {};//Задание 2 или больше или меньше нуля ли этот элемент
+	for (int i = 0; i < 100; ++i)
+	{
+	arrGener[i] = ext::GetRandomValue(-100, 100, true);
+	sum += arrGener[i];
+	if (arrGener[i] == 0) {
+	counterEquals += 1;
+	}
+	else {
+	if (arrGener[i] > 0) {
+	counterMore += 1;
+	}
+	else {
+	counterLess += 1;
+	}
+	}
+	}
+	cout << "Сумма элементов массива: " << sum << " Количество элементов, которые меньше нуля: " << counterLess << " Количество элементов, которые равны нулю: " << counterEquals << " Количество элементов, которые больше нуля: " << counterMore << endl;
+	int arrGener2[100] = {};//Задание 3 или задание с разрядами
+	int ed = 0, des = 0;
+	for (int i = 0; i < 100; ++i)
+	{
+	arrGener2[i] = ext::GetRandomValue(1, 100, true);
+	}
+	for (int i = 0; i < 100; i++) {
+	cout << arrGener2[i] << " ";
+	}
+	cout << endl;
+	cout << "Элементы, в записи которых содержится двойка: ";
+	for (int i = 0; i < 100; i++) {
+	ed = arrGener2[i] % 10;
+	des = (arrGener2[i] / 10) % 10;
+	if ((ed == 2) || (des == 2)) {
+	cout << arrGener2[i] << " ";
+	}
+	}
+	cout << endl;
+	cout << "Элементы, в записи которых не встречается нечетных цифр: ";
+	for (int i = 0; i < 100; i++) {
+	ed = arrGener2[i] % 10;
+	des = (arrGener2[i] / 10) % 10;
+	if ((ed % 2 == 0) && (des % 2 == 0) && (arrGener2[i] / 10 != 1)){
+	cout << arrGener2[i] << " ";
+	}
+	}
+	cout << endl;
+	int arrSum[100] = {};//Задание 4 или складываем массивы
+	for (int i = 0; i < 100; i++) {
+	arrSum[i] = arrGener[i] + arrGener2[i];
+	}
+	for (int i = 1; i <= 100; i++) {
+	cout << arrSum[i - 1] << " ";
+	if (i % 10 == 0) {
+	cout << endl;
+	}
+	}
+	cout << endl;
+	int arrGener3[100] = {};//Задание 3 или найди элемент
+	int userReq = 0, counter = 0;
+	bool returndTruth = false;
+	for (int i = 0; i < 100; ++i)
+	{
+	arrGener3[i] = ext::GetRandomValue(1, 100, true);
+	}
+	cout << "Какой элемент ищем?" << endl;
+	cin >> userReq;
+	for (int i = 0; i < 100; i++) {
+	if (userReq == arrGener3[i]) {
+	returndTruth = true;
+	cout << "О, а этот элемент тут есть!Вот его индекс: " << i << endl;
+	break;
+	}
+	if (userReq < arrGener3[i]) {
+	counter += 1;
+	}
+	}
+	if (returndTruth == false) {
+	cout << "Вам  не повезно с генерацией и вашего элемента я не нашел...Ах да, мне тут надо вывести -1..."<<endl;
+	cout << -1<<endl;
+	}
+	cout << "Минутка интересных (нет) фактов!Я нашел " << counter << " чисел, которые больше вашего числа!Это ведь вам так нужно...";*/
+//ex.4
+/*char chur[100], abs[26];
+	for (int i = 0; i < 100; ++i)
+	{
+
+		chur[i] = GetRandomValue(97, 122);
+		cout << chur[i];
+	}
+	cout << endl;
+	for (char k = 97; k <= 122; ++k)
+	{
+		abs[k] = k;
+
+	}
+	cout << endl;
+	for (char i = 97; i <= 122; ++i)
+	{
+		for (int j = 0; j < 100; ++j)
+		{
+			if (abs[i] == chur[j]) cout << abs[i];
+		}
+	}
+	cout << endl;
+	for (char i = 97; i <= 122; ++i)
+	{
+		cout << "|";
+		for (int j = 0; j < 100; ++j)
+		{
+			if (abs[i] == chur[j]) cout << "*";
+		}
+		cout << endl;
+	}
+
+	cout << endl;*/
+//ex.5
+/*Чему равно количество строк в данном массиве?    - 3
+	Чему равно количество элементов в каждой строке? - 2
+	Какой размер имеет данный массив?                - [3][2]
+	Данные какого типа он хранит?                    - int
+	Как обратиться к элементу со значением 8?        - data[1][0]
+	Как обратиться к элементу со значением 64?       - data[2][1]*/
+   /*int data[][4] = { { 1, 2 },{ 3,4,5 } };
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 4; j++) {
+			data[i][j] *= 2;
+			cout << data[i][j] << " ";
+		}
+	}
+   int array[][4] = { {1,2,3,4},{1,2,3,4},{1,2,3,4} }//кол-во можно не указывать, но надо их проинициализировать*/
+//ex.6
+/*int doubleArray[10][10] = {};
+	int sum = 0, amountOfEven = 0, minIndexLine = 0, minIndexString = 0, maxIndexLine = 0, maxIndexString = 0;
+	for (int i = 0; i < 10; i++) {
+		for (int j = 0; j < 10; j++) {
+			doubleArray[i][j] = ext::GetRandomValue(1, 100);
+			cout << doubleArray[i][j]<<" ";
+			sum += doubleArray[i][j];
+			if (doubleArray[i][j] % 2 == 0) {
+				amountOfEven += 1;
+			}
+			if (doubleArray[i][j] < doubleArray[minIndexLine][minIndexString]) {
+				minIndexLine = i;
+				minIndexString = j;
+			}
+			if (doubleArray[i][j] > doubleArray[maxIndexLine][maxIndexString]) {
+				maxIndexLine = i;
+				maxIndexString = j;
+			}	
+		}
+		cout << endl;
+	}
+	cout << "Сумма элементов: " << sum << " количество четных элементов: " << amountOfEven << " минимальный элемент: " << minIndexLine << " " << minIndexString << " максимальный элемент: " << maxIndexLine << " " << maxIndexString;*/
+ex.dop
