@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-	//zadacha¹1
+	//zadachaÂ¹1
 	int dlina1; int dlina2; int dlina3;
 	cout << "vvedite pervuyu storonu: ";
 	cin >> dlina1;
@@ -26,57 +26,50 @@ int main()
 
 
 
-	//zadacha¹2
-	int dengi;
-	cout << "Vvedite chislo rubley: ";
-		cin >> dengi;
-		switch (dengi % 10)
-		{
-		case 1:
-			if (dengi == 11)
-			{
-				cout << dengi << " rubley"<<endl;
-			}
-			else
-			{
-				cout << dengi << " rubl'"<<endl;
-			}
-			break;
-		case 2:
-		case 3:
-		case 4:
-			cout << dengi << " rublya"<<endl;
-			break;
-		case 0:
-		case 5:
-		case 6:
-		case 7:
-		case 8:
-		case 9:
-			cout << dengi << " rubley"<<endl;
-		}
-
+	//zadachaÂ¹2
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾: " << endl;
+	cin >> name >> endl;
+	name %= 10;
+	switch (name) {
+	case 1:
+		cout << "Ñ€ÑƒÐ±Ð»ÑŒ" << endl;
+		break;
+	case 2:
+	case 3:
+	case 4:
+		cout << "Ñ€ÑƒÐ±Ð»Ñ" << endl;
+		break;
+	case 5:
+	case 6:
+	case 7:
+	case 8:
+	case 9:
+	case 0:
+		cout << "Ñ€ÑƒÐ±Ð»ÐµÐ¹" << endl;
+		break;
+	}
 
 
     //zadacha3
- èñõîäíûå äàííûå, ââîäÿòñÿ ñ êëàâèàòóðû.
-	cout << "true - 1, false - 0" << endl;
 	bool enemyInFront;
-	cout << "enemyInFront? "<<endl;
-	cin >> enemyInFront;
 	bool isBoss;
-	cout << "Is it a boss? " << endl;
-	cin >> isBoss;
 	int robotHealth;
-	cout << "How many heaith have robot? " << endl;
-	cin >>robotHealth;
-	cout << endl;
-	//isprqavlenniy Êîä Âàñè
-	bool shouldFire = true;
-	if (enemyInFront || isBoss || robotHealth>100)
+        bool shouldFire = true;
+	if (enemyInFront == true)
 	{
-          shouldFire = true;
-		  cout << "Fire" << endl;
+	if (isBoss == true)
+	{
+	if (robotHealth < 50) shouldFire = false;
+	if (robotHealth > 100) shouldFire = true;
+	}
+	}
+	else
+	{
+	shouldFire = false;
+	}
+	if(shouldFire)
+	{
+	cout << "Fire" << endl;
 	}
 
 
