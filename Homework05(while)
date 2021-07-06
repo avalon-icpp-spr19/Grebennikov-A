@@ -1,0 +1,103 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+//while
+//Упражнение  1
+
+/*int main()
+{
+int max, min;
+	int num = 1;
+	cout << "Введите последовательность: " << endl;
+	cin >> num;
+	min = num;
+	max = num;
+	while (num != 0) {
+		if (num < min) {
+			min = num;
+		}
+		if (num > max) {
+			max = num;
+		}
+		cin >> num;
+	}
+	cout << min << " " << max << endl;*/
+
+//Упражнение 2
+
+//int main()
+//{
+//	int S = 0;
+//	int num = 1;
+//	int max = 0;
+//	while (num != 0)
+//	{
+//		cin >> num;
+//
+//		S = (num > max) ? 0 : S;
+//		max = (num > max) ? num : max;
+//		S = (num == max) ? ++S : S;
+//	}
+//	cout << S << endl;
+//}
+
+//Упражнение 3
+
+int main() {
+	int n;
+	int s=0;
+	cin >> n;
+	while (n>0)
+	{
+		s = s * 10 + (n % 10);
+		n = n / 10;
+	}
+	cout << s << endl;
+}
+
+//Упражнение 4
+
+//int main()
+//{
+//	int n, counter;
+//	counter = 1;
+//	cin >> n;
+//	while (n > pow(2,counter))
+//	{
+//		counter += 1;
+//	}
+//
+//	cout << (pow(2, counter)) << endl;
+//}
+
+
+//Упражнение 5
+
+//int main()
+//{
+//
+//	int n;
+//	int n1 = 0;
+//	int n2 = 1;
+//	int n3 = 0;
+//	int counter = 0;
+//
+//	cin >> n;
+//
+//	if (n == 0) {
+//		cout << "0";
+//	}
+//	else
+//	{
+//		while (counter < n - 1)
+//		{
+//			n3 = n1 + n2;
+//			n1 = n2;
+//			n2 = n3;
+//			counter += 1;
+//		}
+//
+//		cout << n2;
+//	}
+//}
